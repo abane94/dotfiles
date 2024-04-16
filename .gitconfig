@@ -1,5 +1,7 @@
+[include]
+    path = ~/.ignored/.gitconfig
+
 [init]
 	defaultBranch = main
 [user]
 	name = Aris Husanu
-	email = abane94@gmail.com

@@ -1,0 +1,20 @@
+[font]
+size = 14
+
+[font.bold]
+# family = "UbuntuSansMono NF"
+family = "Iosevka NFM"
+# family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "UbuntuSansMono NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "UbuntuSansMono NF"
+style = "Italic"
+
+[font.normal]
+family = "UbuntuSansMono NF"
+style = "Regular"
