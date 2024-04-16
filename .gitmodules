@@ -1,0 +1,3 @@
+[submodule "/home/aris/.config/nvim"]
+	path = /home/aris/.config/nvim
+	url = git@github.com:abane94/kickstart.nvim.git
