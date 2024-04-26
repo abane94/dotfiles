@@ -18,5 +18,21 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # init
 export CLICOLOR=1
 
+# prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+
+# PROMPT="%F{39}%n%f %B%~%b > "
+
+# PROMPT="%K{39}%F{black}%n%f%k%K{39} %k%K{29}%F{black}%~%f%k%K{63}%F{29} %f%k%K{63} > %k"
+PROMPT="%K{39}%F{239}%n%f%k%K{29}%F{39} %f%k%K{29}%F{black}%~%f%k%K{63}%F{29} %f%k%K{63}%F{236} > %f%k%F{63} %f"
+
+RPROMPT="${vcs_info_msg_0_} %t"
 
 include ~/.ignored/.zshrc
+
+# fnm
+# export PATH="/Users/Aris.Husanu/Library/Application Support/fnm:$PATH"
+# eval "`fnm env`"
