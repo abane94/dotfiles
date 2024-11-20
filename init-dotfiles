@@ -12,7 +12,7 @@ cd ~
 git clone \
    --separate-git-dir=$HOME/dotfiles \
    --recurse-submodules \
-   git@github.com:abane94/dotfiles.git \
+   https://github.com/abane94/dotfiles.git \
    dotfiles-tmp
 
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
