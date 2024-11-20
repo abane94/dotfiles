@@ -27,4 +27,6 @@ rm -rf dotfiles-tmp
 
 # rm init-dotfiles # deleting this would cause a diff
 
+mkdir ~/.ignored
+
 echo done
