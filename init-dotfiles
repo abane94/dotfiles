@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+# Check if the program exists
+if ! command -v rsync  >/dev/null 2>&1; then
+  echo "Error: rsync." >&2
+  exit 1
+fi
+
+cd ~
+
+
+git clone \
+   --separate-git-dir=$HOME/dotfiles \
+   --recurse-submodules \
+   git@github.com:abane94/dotfiles.git \
+   dotfiles-tmp
+
+alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dotlazygit='lazygit --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+dotgit config status.showUntrackedFiles no
+
+
+rsync --recursive --verbose --exclude '.git' dotfiles-tmp/ $HOME/
+
+
+rm -rf dotfiles-tmp
+
+# rm init-dotfiles # deleting this would cause a diff
+
+echo done
