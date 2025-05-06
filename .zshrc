@@ -13,6 +13,7 @@ compinit
 
 # dotfile setup
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias lazydotgit='lazygit --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 
 # init
@@ -31,6 +32,7 @@ PROMPT="%K{39}%F{239}%n%f%k%K{29}%F{39} %f%k%K{29}%F{black}%~%f%k%K{63}%F{29}
 
 RPROMPT="${vcs_info_msg_0_} %t"
 
+include ~/.config/zsh/prompt.zsh
 include ~/.ignored/.zshrc
 
 # fnm
